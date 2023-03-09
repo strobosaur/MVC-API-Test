@@ -18,5 +18,11 @@
             this.email = email;
             this.avatar = avatar;
         }
+
+        // DISPLAY FULL NAME
+        public string DisplayFullName()
+        {
+            return first_name + " " + last_name;
+        }
     }
 }
