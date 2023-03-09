@@ -9,30 +9,10 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-@*<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.first_name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.last_name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.avatar)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>*@
+
 <table class="table">
     <tbody>
+
         @foreach (var item in Model) {
             <tr>
                 <div class="card" style="width: 18rem;">
@@ -56,7 +36,7 @@
                         @*<li class="list-group-item">Vestibulum at eros</li>*@
                     </ul>
                     <div class="card-body">
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
                         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             @*            <a href="#" class="card-link">Card link</a>
@@ -64,28 +44,7 @@
                     </div>
                 </div>
             </tr>
-        @*        <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.first_name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.last_name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.avatar)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                    </td>
-                </tr>*@
         }
+
     </tbody>
 </table>
